@@ -21,3 +21,6 @@ Macで日本語入力プログラムを制御する方法についての考察
 * **資料**: https://teratail.com/questions/141913
 
 2. [`selectedKeyboardInputSource`](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource?language=objc)
+
+* **問題点**: イベントと併せて実装する必要がある
+* **資料**: https://qiita.com/callmekohei/items/29c8a020a74163772997
