@@ -16,9 +16,7 @@ Macで日本語入力プログラムを制御する方法についての考察
 1. `TISSelectInputSource`
 
 * **問題点**: deprecated, carbon
-* **サンプルコード**: https://github.com/miyako/4d-plugin-text-input-service/blob/master/Text%20Input%20Service/4DPlugin.cpp
 * **資料**: https://github.com/pqrs-org/Karabiner-Elements/issues/1602
-* **資料**: https://teratail.com/questions/141913
 
 2. [`selectedKeyboardInputSource`](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource?language=objc)
 
