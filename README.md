@@ -15,7 +15,7 @@ Macで日本語入力プログラムを制御する方法についての考察
 
 1. `TISSelectInputSource`
 
-* **問題点**: deprecated, carbon
+* **問題点**: deprecated, carbon; メインスレッドで実行する必要あり
 * **資料**: https://github.com/pqrs-org/Karabiner-Elements/issues/1602
 
 2. [`selectedKeyboardInputSource`](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource?language=objc)
