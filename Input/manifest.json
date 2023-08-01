@@ -1,0 +1,11 @@
+{
+    "name": "Input",
+    "id": 20000,
+    "commands": [
+        {
+            "theme": "Input",
+            "syntax": "INPUT SET JAPANESE(&L)",
+            "threadSafe": false
+        }
+    ]
+}

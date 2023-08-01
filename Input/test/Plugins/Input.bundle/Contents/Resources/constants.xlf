@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<xliff version="1.0" xmlns:d4="http://www.4d.com/d4-ns">
+    <header>
+        <note>Input</note>
+    </header>
+    <group resname="themes">
+        <trans-unit id="" resname="C1D716AD25D447C38550C6D484E4B4E8" translate="no">
+            <source>Input API</source>
+        </trans-unit>
+    </group>
+    <group restype="x-4DK#" d4:groupName="C1D716AD25D447C38550C6D484E4B4E8">
+        <trans-unit d4:value="1" id="C1D716AD25D447C38550C6D484E4B4E8.101">
+            <source>INPUT_API_CARBON</source>
+        </trans-unit>
+        <trans-unit d4:value="2" id="C1D716AD25D447C38550C6D484E4B4E8.102">
+            <source>INPUT_API_KEYCODE</source>
+        </trans-unit>
+    </group>
+</xliff>
