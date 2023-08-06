@@ -18,6 +18,7 @@
 #pragma mark -
 
 static void INPUT_SET_JAPANESE(PA_PluginParameters params);
+static void INPUT_SET_ASCII(PA_PluginParameters params);
 
 typedef enum {
   
@@ -25,5 +26,12 @@ typedef enum {
     api_mode_kana       = 2
     
 } api_mode_t;
+
+typedef enum {
+  
+    command_mode_ja     = 0,
+    command_mode_ascii  = 1
+    
+} command_mode_t;
 
 #endif /* PLUGIN_INPUT_H */

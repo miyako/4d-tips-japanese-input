@@ -23,6 +23,9 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
 			case 1 :
 				INPUT_SET_JAPANESE(params);
 				break;
+            case 2 :
+                INPUT_SET_ASCII(params);
+                break;
 
         }
 
@@ -33,10 +36,17 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
 	}
 }
 
-static void _keycode_api() {
+static void _keycode_api(command_mode_t lang) {
     
-    CGKeyCode keycode = kVK_JIS_Kana;
+    CGKeyCode keycode;
     
+    if(lang == command_mode_ja)
+    {
+        keycode = kVK_JIS_Kana;
+    }else{
+        keycode = kVK_JIS_Eisu;
+    }
+
     CGEventRef e;
         
     CGEventSourceRef eventSource = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);
@@ -55,9 +65,17 @@ static void _keycode_api() {
     CFRelease(eventSource);
 }
 
-static void _carbon_api() {
+static void _carbon_api(command_mode_t *lang) {
     
-    TISInputSourceRef source = TISCopyInputSourceForLanguage(CFSTR("ja-JP"));
+    TISInputSourceRef source;
+    
+    if(*lang == command_mode_ja)
+    {
+        source = TISCopyInputSourceForLanguage(CFSTR("ja-JP"));
+    }else{
+        source = TISCopyCurrentASCIICapableKeyboardInputSource();
+    }
+
     if(source) {
         /*
          *      If there is more than one such input source
@@ -75,13 +93,14 @@ static void _carbon_api() {
 void INPUT_SET_JAPANESE(PA_PluginParameters params) {
 
     api_mode_t mode = (api_mode_t)PA_GetLongParameter(params, 1);
+    command_mode_t lang = command_mode_ja;
     
     switch (mode) {
         case api_mode_carbon:
-            PA_RunInMainProcess((PA_RunInMainProcessProcPtr)_carbon_api, NULL);
+            PA_RunInMainProcess((PA_RunInMainProcessProcPtr)_carbon_api, &lang);
             break;
         case api_mode_kana:
-            _keycode_api();
+            _keycode_api(lang);
             break;
         default:
             break;
@@ -89,3 +108,20 @@ void INPUT_SET_JAPANESE(PA_PluginParameters params) {
     
 }
 
+void INPUT_SET_ASCII(PA_PluginParameters params) {
+
+    api_mode_t mode = (api_mode_t)PA_GetLongParameter(params, 1);
+    command_mode_t lang = command_mode_ascii;
+    
+    switch (mode) {
+        case api_mode_carbon:
+            PA_RunInMainProcess((PA_RunInMainProcessProcPtr)_carbon_api, &lang);
+            break;
+        case api_mode_kana:
+            _keycode_api(lang);
+            break;
+        default:
+            break;
+    }
+    
+}

@@ -6,6 +6,11 @@
             "theme": "Input",
             "syntax": "INPUT SET JAPANESE(&L)",
             "threadSafe": false
+        },
+        {
+            "theme": "Input",
+            "syntax": "INPUT SET ASCII(&L)",
+            "threadSafe": false
         }
     ]
 }
