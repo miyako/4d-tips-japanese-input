@@ -26,3 +26,5 @@ Macで日本語入力プログラムを制御する方法についての考察
 ## 回避策
 
 `CGEventPost`で`kVK_JIS_Kana`の使用をシミュレートする
+
+[miyako.github.io](https://miyako.github.io/2023/08/03/4d-plugin-japanese-input.html)
