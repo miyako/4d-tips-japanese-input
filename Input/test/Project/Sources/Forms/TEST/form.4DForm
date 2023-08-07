@@ -27,7 +27,7 @@
 					"type": "input",
 					"left": 20,
 					"top": 40,
-					"width": 248,
+					"width": 128,
 					"height": 17,
 					"events": [
 						"onGettingFocus"
@@ -36,8 +36,8 @@
 				},
 				"List Box": {
 					"type": "listbox",
-					"left": 74,
-					"top": 115,
+					"left": 32,
+					"top": 161,
 					"width": 143,
 					"height": 134,
 					"events": [],
@@ -59,14 +59,14 @@
 					"text": "TISSelectInputSource",
 					"top": 20,
 					"left": 20,
-					"width": 243,
+					"width": 143,
 					"height": 16
 				},
 				"Input1": {
 					"type": "input",
 					"left": 240,
-					"top": 140,
-					"width": 248,
+					"top": 40,
+					"width": 148,
 					"height": 17,
 					"events": [
 						"onGettingFocus"
@@ -76,15 +76,80 @@
 				"Text1": {
 					"type": "text",
 					"text": "CGEventPost",
-					"top": 120,
+					"top": 20,
 					"left": 240,
-					"width": 243,
+					"width": 143,
 					"height": 16
+				},
+				"Input2": {
+					"type": "input",
+					"left": 20,
+					"top": 80,
+					"width": 128,
+					"height": 17,
+					"events": [
+						"onGettingFocus"
+					],
+					"method": "ObjectMethods/Input2.4dm"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 240,
+					"top": 80,
+					"width": 148,
+					"height": 17,
+					"events": [
+						"onGettingFocus"
+					],
+					"method": "ObjectMethods/Input3.4dm"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "J",
+					"top": 40,
+					"left": 175,
+					"width": 15,
+					"height": 16,
+					"textAlign": "center"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "E",
+					"top": 80,
+					"left": 175,
+					"width": 15,
+					"height": 16,
+					"textAlign": "center"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "J",
+					"top": 40,
+					"left": 415,
+					"width": 15,
+					"height": 16,
+					"textAlign": "center"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "E",
+					"top": 80,
+					"left": 415,
+					"width": 15,
+					"height": 16,
+					"textAlign": "center"
 				}
-			}
+			},
+			"entryOrder": [
+				"Input",
+				"List Box",
+				"Input1",
+				"Input2",
+				"Input3"
+			]
 		}
 	],
-	"geometryStamp": 32,
+	"geometryStamp": 138,
 	"method": "",
 	"editor": {
 		"activeView": "View 1",
